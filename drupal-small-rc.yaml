@@ -116,7 +116,7 @@ parameters:
     type: string
     default: 2 GB General Purpose v1
     label: Server Flavor
-    description: Flavor of Cloud Server to use for WordPress
+    description: Flavor of Cloud Server to use for Drupal
     constraints:
     - allowed_values:
       - 2 GB General Purpose v1

@@ -178,7 +178,7 @@ the `-P` flag to specify a custom parameter.
 * `database_disk`: Size of the Cloud Database volume in GB (Default: 5)
 * `database_flavor`: Flavor for the Cloud Database (Default: 1GB Instance)
 * `server_count`: Number of secondary web nodes (Default: 0)
-* `loadbalancer_flavor`: Flavor of Cloud Server to use for WordPress (Default: 2 GB General Purpose v1)
+* `loadbalancer_flavor`: Flavor of Cloud Server to use for Drupal (Default: 2 GB General Purpose v1)
 
 Outputs
 =======
