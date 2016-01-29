@@ -27,9 +27,6 @@ def check():
         assert service.is_enabled('lsyncd'), 'lsyncd is not enabled'
 
 
-    assert http_check('http://localhost/', 'Powered by WordPress')
-
-
 @task
 def artifacts():
     env.platform_family = detect.detect()
