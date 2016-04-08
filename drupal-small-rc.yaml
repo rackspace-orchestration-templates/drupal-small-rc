@@ -46,11 +46,13 @@ parameters:
     constraints:
     - allowed_pattern: "^[a-zA-Z0-9.-]{1,255}.[a-zA-Z]{2,15}$"
       description: Must be a valid domain name
+    immutable: true
   drupal_sitename:
     type: string
     default: Example Site
     label: Site Title
     description: Title to use for Drupal Site
+    immutable: true
   drupal_user:
     type: string
     default: admin
@@ -59,17 +61,20 @@ parameters:
     constraints:
     - allowed_pattern: "^[a-zA-Z0-9]*$"
       description: Only can contain A-Z and 0-9
+    immutable: true
   drupal_email:
     type: string
     default: admin@example.com
     label: Drupal Admin E-mail
     description: E-mail Address for Drupal Admin User
+    immutable: true
   rc_network_name:
     type: string
     label: RackConnect Network
     description: Name or UUID of RackConnected network to attach this server to
     constraints:
     - custom_constraint: rackconnect.network
+    immutable: true
   #Advanced Options
   server_flavor:
     type: string
@@ -82,6 +87,7 @@ parameters:
       - 2 GB General Purpose v1
       - 4 GB General Purpose v1
       - 8 GB General Purpose v1
+    immutable: true
   database_disk:
     type: number
     default: 5
@@ -111,6 +117,7 @@ parameters:
     constraints:
     - allowed_values:
       - f4bbbce2-50b0-4b07-bf09-96c175a45f4b
+    immutable: true
   server_count:
     type: number
     default: 0
@@ -128,21 +135,25 @@ parameters:
       - 2 GB General Purpose v1
       - 4 GB General Purpose v1
       - 8 GB General Purpose v1
+    immutable: true
   secondary_template:
     type: string
     default: https://raw.githubusercontent.com/rackspace-orchestration-templates/drupal-small-rc/stable/drupal-small-rc-secondary.yaml
     label: Secondary Template
     description: Template to use for secondary servers
+    immutable: true
   ansible_branch:
     type: string
     default: stable
     label: Git Branch or Tag for Ansible Roles
     description: The Ansible Roles will be pulled from Git, using the tag or branch provided
+    immutable: true
   ansible_repo:
     type: string
     default: https://github.com/rackspace-orchestration-templates/ansible-roles.git
     label: Git Repo for Ansible Roles
     description: The Ansible Roles will be pulled from Git, using the repo provided
+    immutable: true
 
 resources:
   #Passwords
